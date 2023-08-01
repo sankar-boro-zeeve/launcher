@@ -1,5 +1,5 @@
 import type { PolkadotLaunchConfig as ZombienetConfig } from "../../orchestrator";
-import { decorators } from "@zombienet/utils";
+import { decorators } from "../../utils";
 import fs from "fs/promises";
 import path from "path";
 import { PolkadotLaunch } from "../types";

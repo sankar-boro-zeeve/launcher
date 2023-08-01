@@ -1,7 +1,7 @@
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { Keyring } from "@polkadot/keyring";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
-import { readDataFile } from "@zombienet/utils";
+import { readDataFile } from "../../utils";
 import { RegisterParachainOptions } from "../types";
 import {
   chainCustomSectionUpgrade,

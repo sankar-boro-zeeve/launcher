@@ -16,7 +16,7 @@ import {
 } from "./metrics";
 import { getClient } from "./providers/client";
 
-import { TimeoutAbortController, decorators } from "@zombienet/utils";
+import { TimeoutAbortController, decorators } from "../utils";
 import { paraGetBlockHeight, paraIsRegistered } from "./jsapi-helpers";
 import { PARA } from "./paras-decorators";
 

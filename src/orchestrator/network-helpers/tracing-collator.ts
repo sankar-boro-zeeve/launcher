@@ -1,4 +1,4 @@
-import { decorators } from "@zombienet/utils";
+import { decorators } from "../../utils";
 import {
   TRACING_COLLATOR_NAMESPACE,
   TRACING_COLLATOR_PODNAME,

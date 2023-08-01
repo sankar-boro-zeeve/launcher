@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Network } from "./orchestrator";
-import { decorators } from "@zombienet/utils";
+import { decorators } from "./utils";
 import { Command, Option } from "commander";
 import { convert } from "./cli/actions/convert";
 import { setup } from "./cli/actions/setup";

@@ -1,5 +1,5 @@
 const debug = require("debug")("zombie::metrics");
-import { decorators, TimeoutAbortController } from "@zombienet/utils";
+import { decorators, TimeoutAbortController } from "../../utils";
 import { DEFAULT_PROMETHEUS_PREFIX } from "../constants";
 import { parseLine } from "./parseLine";
 

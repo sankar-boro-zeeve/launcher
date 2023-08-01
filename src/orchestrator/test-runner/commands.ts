@@ -1,6 +1,6 @@
 const chai = require("chai");
 
-import { sleep } from "@zombienet/utils";
+import { sleep } from "../../utils";
 import { Network } from "../network";
 import { FnArgs } from "../types";
 

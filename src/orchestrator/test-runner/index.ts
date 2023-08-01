@@ -4,7 +4,7 @@ import {
   readNetworkConfig,
   setSilent,
   sleep,
-} from "@zombienet/utils";
+} from "../../utils";
 import fs from "fs";
 import Mocha from "mocha";
 import path from "path";

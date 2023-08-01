@@ -13,7 +13,7 @@ import {
   series,
   setSilent,
   sleep,
-} from "@zombienet/utils";
+} from "../utils";
 import fs from "fs";
 import tmp from "tmp-promise";
 import {

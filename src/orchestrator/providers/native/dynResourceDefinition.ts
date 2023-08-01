@@ -1,4 +1,4 @@
-import { getRandomPort } from "@zombienet/utils";
+import { getRandomPort } from "../../../utils";
 import { getUniqueName } from "../../configGenerator";
 import { Network } from "../../network";
 import { Node, ZombieRole } from "../../types";

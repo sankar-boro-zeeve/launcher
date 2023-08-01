@@ -2,7 +2,7 @@ import {
   CreateLogTable,
   TimeoutAbortController,
   decorators,
-} from "@zombienet/utils";
+} from "../utils";
 import fs from "fs";
 import {
   BAKCCHANNEL_POD_NAME,

@@ -1,4 +1,4 @@
-import { series } from "@zombienet/utils";
+import { series } from "../utils";
 import { getProvider } from "./providers";
 import { Client } from "./providers/client";
 import { ComputedNetwork } from "./types";

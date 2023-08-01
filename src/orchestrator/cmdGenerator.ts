@@ -1,4 +1,4 @@
-import { decorators, getRandomPort } from "@zombienet/utils";
+import { decorators, getRandomPort } from "../utils";
 import {
   DEFAULT_COMMAND,
   P2P_PORT,

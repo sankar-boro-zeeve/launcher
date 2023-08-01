@@ -1,4 +1,4 @@
-import { askQuestion, convertBytes, decorators } from "@zombienet/utils";
+import { askQuestion, convertBytes, decorators } from "../../utils";
 import cliProgress from "cli-progress";
 import fs from "fs";
 import path from "path";

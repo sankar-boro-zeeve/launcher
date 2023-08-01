@@ -1,4 +1,4 @@
-import { makeDir } from "@zombienet/utils";
+import { makeDir } from "../../../../utils";
 import { genCmd } from "../../../cmdGenerator";
 import { ZombieRole, ZombieRoleLabel } from "../../../types";
 import { NodeResource } from "./nodeResource";

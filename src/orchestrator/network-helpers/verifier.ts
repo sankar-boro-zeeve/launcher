@@ -1,4 +1,4 @@
-import { series } from "@zombienet/utils";
+import { series } from "../../utils";
 import { getProcessStartTimeKey } from "../metrics";
 import { Network } from "../network";
 import { NetworkNode } from "../networkNode";

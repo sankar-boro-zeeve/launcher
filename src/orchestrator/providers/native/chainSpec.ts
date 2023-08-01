@@ -1,4 +1,4 @@
-import { sleep } from "@zombienet/utils";
+import { sleep } from "../../../utils";
 import { promises as fsPromises } from "fs";
 import { readAndParseChainSpec } from "../../chainSpec";
 import {

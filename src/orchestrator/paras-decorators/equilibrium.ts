@@ -1,4 +1,4 @@
-import { CreateLogTable, decorators } from "@zombienet/utils";
+import { CreateLogTable, decorators } from "../../utils";
 import {
   getRuntimeConfig,
   readAndParseChainSpec,

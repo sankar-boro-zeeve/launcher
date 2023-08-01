@@ -5,7 +5,7 @@ import {
   decorators,
   getRandom,
   readDataFile,
-} from "@zombienet/utils";
+} from "../utils";
 import crypto from "crypto";
 import fs from "fs";
 import { generateKeyFromSeed } from "./keys";

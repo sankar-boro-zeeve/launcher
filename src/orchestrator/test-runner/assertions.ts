@@ -1,5 +1,5 @@
 import { ApiPromise, Keyring } from "@polkadot/api";
-import { decorators, isValidHttpUrl } from "@zombienet/utils";
+import { decorators, isValidHttpUrl } from "../../utils";
 import { assert, expect } from "chai";
 import execa from "execa";
 import fs from "fs/promises";

@@ -6,7 +6,7 @@ import {
   getRandomPort,
   getSha256,
   validateImageUrl,
-} from "@zombienet/utils";
+} from "../utils";
 import {
   ARGS_TO_REMOVE,
   DEFAULT_ADDER_COLLATOR_BIN,

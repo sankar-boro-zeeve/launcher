@@ -1,7 +1,7 @@
 import { Keyring } from "@polkadot/api";
 import { u8aToHex } from "@polkadot/util";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
-import { CreateLogTable, decorators } from "@zombienet/utils";
+import { CreateLogTable, decorators } from "../../utils";
 import {
   clearAuthorities as _clearAuthorities,
   specHaveSessionsKeys as _specHaveSessionsKeys,

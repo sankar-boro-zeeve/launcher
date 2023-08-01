@@ -5,7 +5,7 @@ import {
   mnemonicGenerate,
   mnemonicToMiniSecret,
 } from "@polkadot/util-crypto";
-import { makeDir } from "@zombienet/utils";
+import { makeDir } from "../utils";
 import fs from "fs";
 import { Node } from "./types";
 import { SEED } from "./constants";

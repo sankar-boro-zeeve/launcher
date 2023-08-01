@@ -5,7 +5,7 @@ import {
   makeDir,
   sleep,
   writeLocalJsonFile,
-} from "@zombienet/utils";
+} from "../../../utils";
 import { spawn } from "child_process";
 import execa from "execa";
 import { copy as fseCopy } from "fs-extra";

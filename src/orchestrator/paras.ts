@@ -1,4 +1,4 @@
-import { decorators, getRandomPort } from "@zombienet/utils";
+import { decorators, getRandomPort } from "../utils";
 import fs from "fs";
 import chainSpecFns, { isRawSpec } from "./chainSpec";
 import { getUniqueName } from "./configGenerator";

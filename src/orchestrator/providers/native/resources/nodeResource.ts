@@ -1,4 +1,4 @@
-import { getRandomPort, makeDir } from "@zombienet/utils";
+import { getRandomPort, makeDir } from "../../../../utils";
 import { genCmd, genCumulusCollatorCmd } from "../../../cmdGenerator";
 import {
   P2P_PORT,

@@ -4,7 +4,7 @@ import {
   decorators,
   getCredsFilePath,
   readNetworkConfig,
-} from "@zombienet/utils";
+} from "../../utils";
 import fs from "fs";
 import { resolve } from "path";
 import {

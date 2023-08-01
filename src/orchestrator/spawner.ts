@@ -3,7 +3,7 @@ import {
   decorators,
   getLokiUrl,
   makeDir,
-} from "@zombienet/utils";
+} from "../utils";
 import path from "path";
 import { generateNodeMultiAddress } from "./bootnode";
 import { getChainIdFromSpec } from "./chainSpec";
