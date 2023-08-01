@@ -145,6 +145,7 @@ function asyncAction(cmd: Function) {
   return function () {
     // eslint-disable-next-line prefer-rest-params
     const args = [...arguments];
+    console.log("args", args);
     (async () => {
       try {
         if (cmd.name == "spawn") {

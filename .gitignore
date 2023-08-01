@@ -3,3 +3,8 @@ dist
 tmp
 configs
 launcher.log
+.env
+bins
+**/target/
+*.swp
+.vscode

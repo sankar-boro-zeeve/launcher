@@ -113,7 +113,10 @@ const ARGS_TO_REMOVE: { [key: string]: number } = {
 
 const TOKEN_PLACEHOLDER = /{{ZOMBIE:(.*?):(.*?)}}/gi;
 const SEED = "daughter peasant twelve bless century neglect title mouse habit plate galaxy ticket"
+const CHAIN_SPEC_PATH = `${process.cwd()}/chain_specs`;
+
 export {
+  CHAIN_SPEC_PATH,
   SEED,
   REGULAR_BIN_PATH,
   PROMETHEUS_PORT,

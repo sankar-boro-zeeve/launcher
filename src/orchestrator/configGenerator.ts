@@ -9,6 +9,7 @@ import {
 } from "../utils";
 import {
   ARGS_TO_REMOVE,
+  CHAIN_SPEC_PATH,
   DEFAULT_ADDER_COLLATOR_BIN,
   DEFAULT_BALANCE,
   DEFAULT_CHAIN,
@@ -45,7 +46,7 @@ import {
 const debug = require("debug")("zombie::config-manager");
 
 // get the path of the zombie wrapper
-export const zombieWrapperPath = resolve(__dirname, `../${ZOMBIE_WRAPPER}`);
+export const zombieWrapperPath = `${process.cwd()}/${ZOMBIE_WRAPPER}`;
 
 const DEFAULT_ENV: envVars[] = [
   { name: "COLORBT_SHOW_HIDDEN", value: "1" },
@@ -129,6 +130,7 @@ export async function generateNetworkSpec(
       defaultPrometheusPrefix:
         config.relaychain.default_prometheus_prefix ||
         DEFAULT_PROMETHEUS_PREFIX,
+      chainSpecPath: CHAIN_SPEC_PATH
     },
     parachains: [],
   };

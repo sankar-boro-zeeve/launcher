@@ -33,7 +33,7 @@ export async function spawn(
   setGlobalNetwork: (network: Network) => void,
 ): Promise<void> {
   const opts = { ...program.parent.opts(), ...cmdOpts };
-  const dir = opts.dir || "";
+  const dir = `${process.cwd()}/tmp`;
   const force = opts.force || false;
   const monitor = opts.monitor || false;
   // By default spawn pods/process in batches of 4,
@@ -71,20 +71,6 @@ export async function spawn(
   }
 
   let creds = "";
-  if (config.settings?.provider === "kubernetes") {
-    creds = getCredsFilePath(credsFile || "config") || "";
-    if (!creds) {
-      console.log(
-        `Running ${config.settings?.provider || DEFAULT_PROVIDER} provider:`,
-      );
-      console.error(
-        `${decorators.reverse(
-          decorators.red(`  ⚠ I can't find the Creds file: ${credsFile}`),
-        )}`,
-      );
-      process.exit();
-    }
-  }
 
   const inCI = process.env.RUN_IN_CONTAINER === "1";
   const options = {

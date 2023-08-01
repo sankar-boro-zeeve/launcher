@@ -1,0 +1,33 @@
+{
+    "relaychain": {
+        "default_command": "polkadot",
+        "default_args": [
+            "-lparachain=debug"
+        ],
+        "chain": "rococo-local",
+        "nodes": [
+            {
+            "name": "alice",
+            "validator": true
+            },
+            {
+            "name": "bob",
+            "validator": true
+            }
+        ],
+        "chain_spec_path": "/home/sankar/files/rococo/relay_chain_spec.json"
+    },
+    "parachains": [
+        {
+            "id": 2000,
+            "collator": {
+                "name": "genesis-node"
+            }
+        }
+    ],
+    "configBasePath": "/home/sankar/sankar/launcher/chain_specs",
+    "settings": {
+        "provider": "native",
+        "timeout": 1200
+    }
+  }
