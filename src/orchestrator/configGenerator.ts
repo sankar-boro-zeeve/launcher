@@ -192,7 +192,7 @@ export async function generateNetworkSpec(
       relayChainBootnodes,
       globalOverrides,
       node.name, // group of 1
-      false
+      node.seed
     );
 
     networkSpec.relaychain.nodes.push(nodeSetup);
@@ -227,7 +227,7 @@ export async function generateNetworkSpec(
         relayChainBootnodes,
         globalOverrides,
         nodeGroup.name,
-        true
+        undefined
       );
       networkSpec.relaychain.nodes.push(nodeSetup);
     }
@@ -524,7 +524,7 @@ async function getCollatorNodeFromConfig(
 
   const collatorName = getUniqueName(collatorConfig.name || "collator");
   const [decoratedKeysGenerator] = decorate(para, [generateKeyForNode]);
-  const accountsForNode = await decoratedKeysGenerator(collatorName);
+  const accountsForNode = await decoratedKeysGenerator(collatorName, collatorConfig.seed);
 
   const provider = networkSpec.settings.provider;
   const ports = await getPorts(provider, collatorConfig);
@@ -568,7 +568,7 @@ async function getNodeFromConfig(
   relayChainBootnodes: string[],
   globalOverrides: Override[],
   group?: string,
-  hasSeed?: boolean
+  nodeSeed?: string
 ): Promise<Node> {
   const command = node.command
     ? node.command
@@ -601,7 +601,7 @@ async function getNodeFromConfig(
   const isValidator = node.validator !== false;
 
   const nodeName = getUniqueName(node.name);
-  const accountsForNode = await generateKeyForNode(nodeName, hasSeed);
+  const accountsForNode = await generateKeyForNode(nodeName, nodeSeed);
 
   const provider = networkSpec.settings.provider;
   const ports = await getPorts(provider, node);

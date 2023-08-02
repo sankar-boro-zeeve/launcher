@@ -68,6 +68,7 @@ export interface NodeConfig {
   rpc_port?: number;
   prometheus_port?: number;
   p2p_port?: number;
+  seed?: string;
 }
 
 export interface NodeGroupConfig {

@@ -8,7 +8,6 @@ import {
 import { makeDir } from "../utils";
 import fs from "fs";
 import { Node } from "./types";
-import { SEED } from "./constants";
 
 function nameCase(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,14 +20,16 @@ export async function generateKeyFromSeed(seed: string): Promise<any> {
   return sr_keyring.createFromUri(`//${seed}`);
 }
 
-export async function generateKeyForNode(nodeName?: string, hasSeed?: boolean): Promise<any> {
+export async function generateKeyForNode(nodeName?: string, nodeSeed?: string): Promise<any> {
+  console.log("nodeSeed", nodeSeed);
   await cryptoWaitReady();
 
   const mnemonic = mnemonicGenerate();
   const tseed = nodeName
     ? `//${nameCase(nodeName)}`
     : u8aToHex(mnemonicToMiniSecret(mnemonic));
-  const seed = hasSeed === true || nodeName === 'genesis-node' ? SEED : tseed;
+  // const seed = nodeSeed || nodeName === 'genesis-node' ? SEED : tseed;
+  const seed = nodeSeed ? nodeSeed : tseed;
 
   const sr_keyring = new Keyring({ type: "sr25519" });
   const sr_account = sr_keyring.createFromUri(`${seed}`);

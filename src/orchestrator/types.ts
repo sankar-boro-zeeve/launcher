@@ -81,6 +81,7 @@ export interface NodeConfig {
   db_snapshot?: string;
   p2p_cert_hash?: string; // libp2p certhash to use with webrtc transport.
   substrate_cli_args_version?: SubstrateCliArgsVersion;
+  seed?: string;
 }
 
 export interface NodeGroupConfig {
