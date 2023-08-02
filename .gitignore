@@ -8,3 +8,4 @@ bins
 **/target/
 *.swp
 .vscode
+logs
